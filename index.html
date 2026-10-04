@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Around The World By Johan: explora las banderas, población, región y capital de cada país en español e inglés.">
+  <meta name="theme-color" content="#fafafa">
+  <title>Around The World By Johan</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><div class="header-inner">
+    <h1><a class="brand" href="./">Around The World <span>By Johan</span></a></h1>
+    <div class="header-actions"><button id="language-toggle" class="language-toggle" type="button" aria-label="Switch to English">ES / EN</button><button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false"><span class="theme-icon" aria-hidden="true">☾</span><span id="theme-label">Modo oscuro</span></button></div>
+  </div></header>
+  <main class="page-shell">
+    <section class="controls" aria-label="Countries / Países">
+      <label class="search-box" for="search-input"><span class="search-icon" aria-hidden="true">⌕</span><span id="search-label" class="sr-only">Buscar por nombre de país</span><input id="search-input" type="search" placeholder="Buscar un país…" autocomplete="off"><kbd>Ctrl K</kbd></label>
+      <label class="select-wrap"><span id="region-label" class="sr-only">Filtrar por región</span><select id="region-filter"><option value="">Todas las regiones</option><option value="Africa">África</option><option value="Americas">América</option><option value="Asia">Asia</option><option value="Europe">Europa</option><option value="Oceania">Oceanía</option><option value="Antarctic">Antártida</option></select><span class="select-arrow" aria-hidden="true">⌄</span></label>
+    </section>
+    <div class="results-line"><p id="results-count" aria-live="polite"></p><button id="clear-filters" class="clear-button" type="button" hidden>Limpiar filtros</button></div>
+    <div id="status" class="status" role="status" aria-live="polite">Cargando países…</div>
+    <section id="country-grid" class="country-grid" aria-label="Countries / Países"></section>
+    <footer class="footer"><span id="footer-credit">Explora el mundo · Hecho por Johan</span><span><span id="data-label">Datos y población: </span><a href="https://restcountries.conventus.de/" target="_blank" rel="noreferrer">REST Countries</a> · <a href="https://flagcdn.com/" target="_blank" rel="noreferrer">FlagCDN</a></span></footer>
+  </main>
+</body>
+</html>
